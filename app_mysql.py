@@ -11,8 +11,8 @@ os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 def get_db_connection():
     return mysql.connector.connect(
         host="localhost",
-        user="gustavo",  
-        password="45878329", 
+        user="root",  
+        password="", 
         database="tarefas"
     )
 

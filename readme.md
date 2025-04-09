@@ -3,7 +3,7 @@
 Este é um sistema web simples para gerenciamento de tarefas, feito com Python e Flask. O projeto possui duas versões:
 
 - Versão que usa um arquivo CSV para armazenar os dados
-- Versão que usa um banco de dados MySQL
+- Versão que usa um banco de dados MySQL.
 
 ## Funcionalidades
 
@@ -18,8 +18,7 @@ Este é um sistema web simples para gerenciamento de tarefas, feito com Python e
 ### 1. Clone o projeto
 
 ```bash
-bash
-CopiarEditar
+
 git clone https://github.com/seu-usuario/seu-projeto.git
 cd seu-projeto
 
@@ -32,8 +31,7 @@ cd seu-projeto
 ### Executar
 
 ```bash
-bash
-CopiarEditar
+
 python app_csv.py
 
 ```
@@ -41,8 +39,7 @@ python app_csv.py
 ### Estrutura esperada
 
 ```
-diff
-CopiarEditar
+
 - app_csv.py
 - tarefas.csv (será criado automaticamente)
 - uploads/ (pasta onde ficam as imagens)
@@ -63,8 +60,7 @@ CopiarEditar
 - Banco de dados e tabela criados com o seguinte comando:
 
 ```sql
-sql
-CopiarEditar
+
 CREATE DATABASE tarefas;
 USE tarefas;
 
@@ -81,19 +77,17 @@ CREATE TABLE tarefas (
 ### Instalar dependências
 
 ```bash
-bash
-CopiarEditar
+
 pip install flask mysql-connector-python
 
 ```
 
 ### Configurar conexão com banco
 
-Edite a função `get_db_connection()` no arquivo `app_mysql.py` com os seus dados:
+Edite a função get_db_connection() no arquivo app_mysql.py com os seus dados:
 
 ```python
-python
-CopiarEditar
+
 def get_db_connection():
     return mysql.connector.connect(
         host="localhost",
@@ -107,8 +101,7 @@ def get_db_connection():
 ### Executar
 
 ```bash
-bash
-CopiarEditar
+
 python app_mysql.py
 
 ```
@@ -117,14 +110,14 @@ python app_mysql.py
 
 ## Uploads
 
-As imagens enviadas são salvas na pasta `uploads`. Ela é criada automaticamente se não existir.
+As imagens enviadas são salvas na pasta uploads. Ela é criada automaticamente se não existir.
 
 ---
 
 ## Templates HTML
 
-Os arquivos HTML devem estar na pasta `templates`:
+Os arquivos HTML devem estar na pasta templates:
 
-- `tarefas.html`: exibe a lista de tarefas
-- `form_tarefas.html`: formulário para adicionar tarefa
-- `editar_tarefa.html`: formulário para editar tarefa
+- tarefas.html: exibe a lista de tarefas
+- form_tarefas.html: formulário para adicionar tarefa
+- editar_tarefa.html: formulário para editar tarefa
