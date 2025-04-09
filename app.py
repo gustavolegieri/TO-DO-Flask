@@ -75,11 +75,11 @@ def adicionar_tarefa_route():
     adicionar_tarefa(nome, grau, descricao, caminho_imagem)
     return redirect('/tarefas')
 
-@app.route('/editar_tarefa/<nome>', methods=['GET', 'POST'])
-def editar_tarefa(nome):
+@app.route('/editar_tarefa/<int:id>', methods=['GET', 'POST'])
+def editar_tarefa(id):
     tarefas = carregar_tarefas()
     for tarefa in tarefas:
-        if tarefa[1] == nome: 
+        if int(tarefa[0]) == id:  # compara pelo ID (tarefa[0])
             if request.method == 'POST':
                 tarefa[2] = request.form['grau']
                 tarefa[3] = request.form['descricao']

@@ -47,10 +47,10 @@
                             </td>
                             <td class="px-4 py-2 border-b">
                                 <div class="flex gap-2">
-                                    <a href="/editar_tarefa/{{ tarefa[1] }}" class="bg-yellow-400 text-white px-3 py-1 rounded hover:bg-yellow-500 transition">
+                                    <a href="/editar_tarefa/{{ tarefa[0] }}" class="bg-yellow-400 text-white px-3 py-1 rounded hover:bg-yellow-500 transition">
                                         Editar
                                     </a>
-                                    <form action="/excluir_tarefa/{{ tarefa[1] }}" method="post" class="inline">
+                                    <form action="/excluir_tarefa/{{ tarefa[0] }}" method="post" class="inline">
                                         <button type="submit" class="bg-red-500 text-white px-3 py-1 rounded hover:bg-red-600 transition">
                                             Excluir
                                         </button>
