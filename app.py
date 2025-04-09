@@ -79,7 +79,7 @@ def adicionar_tarefa_route():
 def editar_tarefa(id):
     tarefas = carregar_tarefas()
     for tarefa in tarefas:
-        if int(tarefa[0]) == id:  # compara pelo ID (tarefa[0])
+        if int(tarefa[0]) == id:  
             if request.method == 'POST':
                 tarefa[2] = request.form['grau']
                 tarefa[3] = request.form['descricao']
@@ -88,10 +88,10 @@ def editar_tarefa(id):
             return render_template("editar_tarefa.html", tarefa=tarefa)
     return redirect('/tarefas')
 
-@app.route('/excluir_tarefa/<nome>', methods=['POST'])
-def excluir_tarefa(nome):
+@app.route('/excluir_tarefa/<int:id>', methods=['POST'])
+def excluir_tarefa(id):
     tarefas = carregar_tarefas()
-    tarefas = [tarefa for tarefa in tarefas if tarefa[1] != nome]  
+    tarefas = [tarefa for tarefa in tarefas if int(tarefa[0]) != id]
     salvar_tarefas(tarefas)
     return redirect('/tarefas')
 
