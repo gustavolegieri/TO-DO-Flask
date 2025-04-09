@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nova Tarefa</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 text-gray-800">
+    <!-- Container principal -->
+    <div class="min-h-screen flex items-center justify-center px-4">
+        <div class="bg-white p-8 rounded-xl shadow-md w-full max-w-lg">
+            <h1 class="text-2xl font-bold text-center mb-6 text-blue-600">Adicionar Nova Tarefa</h1>
+
+            <form action="/adicionar_tarefa" method="post" enctype="multipart/form-data" class="space-y-5">
+                <!-- Nome -->
+                <div>
+                    <label for="nome" class="block font-medium mb-1">Nome:</label>
+                    <input type="text" id="nome" name="nome" required
+                        class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400">
+                </div>
+
+                <!-- Grau -->
+                <div>
+                    <label for="grau" class="block font-medium mb-1">Grau:</label>
+                    <input type="text" id="grau" name="grau" required
+                        class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400">
+                </div>
+
+                <!-- Descrição -->
+                <div>
+                    <label for="descricao" class="block font-medium mb-1">Descrição:</label>
+                    <textarea id="descricao" name="descricao" required rows="4"
+                        class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400 resize-none"></textarea>
+                </div>
+
+                <!-- Imagem -->
+                <div>
+                    <label for="imagem" class="block font-medium mb-1">Imagem (opcional):</label>
+                    <input type="file" id="imagem" name="imagem"
+                        class="w-full text-gray-700 file:mr-4 file:py-2 file:px-4
+                        file:rounded-full file:border-0
+                        file:text-sm file:font-semibold
+                        file:bg-blue-100 file:text-blue-700
+                        hover:file:bg-blue-200">
+                </div>
+
+                <!-- Botão -->
+                <div class="text-center">
+                    <button type="submit"
+                        class="bg-blue-600 text-white px-6 py-2 rounded-lg font-semibold hover:bg-blue-700 transition">
+                        Adicionar
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
